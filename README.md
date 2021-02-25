@@ -12,7 +12,6 @@
 + Template String: Tạo templaet HTML cực kì đơn giản
 Weak, Set: các kiểu dữ liệu phức tạp mới
 Để sửa chữa khi bạn sử dụng $(this) sẽ thay bằng $(e.currentTarget)
-
 ## 1_Let và Var
 + let cho phép chúng ta cập nhật giá trị của biến (không cho phép chúng ta tái khái báo lại biến đó).
 ### -Giống nhau:
@@ -28,14 +27,14 @@ Weak, Set: các kiểu dữ liệu phức tạp mới
 hello = () => {
 console.log('hello')
 }
-// hello()
+*// hello()*
 
 ### Còn Function thông thường thì :
 
 function hello(){
 console.log('hello')
 }
-// hello()
+*// hello()*
 
 ### Với TH có tham số :
 
@@ -57,7 +56,7 @@ return x * 2
 
 const numbers = [1,2,3,4]
 const newArray = numbers.map(item => item * 2 )
-// console.log(newArray)
+*// console.log(newArray)*
 
 + Trông có vẻ tối giản code so với:
 
@@ -65,7 +64,7 @@ const numbers = [1,2,3,4]
 const newArray = numbers.map(function(item){
 return item => item * 2
 })
-*// console.log(newArray)
+*// console.log(newArray)*
 
 + ES6 Bạn có thể tạo hàm bằng cách sử dụng dấu mũi tên =>.(Arrow là một dạng viết tắt của các function sử dụng dấu =>,
 
@@ -74,7 +73,7 @@ return item => item * 2
 + Vậy nên ta có thể định nghĩa class Project của ta theo cách này để xài như sau:
 
 class Project {
-    *// Một tí code ở đây
+    *// Một tí code ở đây*
 }
 + Đây cũng là cách hay được sử dụng nhất. Và khi ta muốn tạo một instance thì vẫn như các ngôn ngữ khác:
     const project = new Project()
@@ -83,12 +82,12 @@ class Project {
  chúng ta có thêm một cách nữa để khai báo class Project của chúng ta, class expressions:
 
 const Project = class {
-    // Một tí code nữa cũng ở đây
+  *// Một tí code nữa cũng ở đây*
 }
 + Nhưng, bên trong cách này lại có một kiểu ghi nữa***, giả sử ta gán vào biến tên Project nhưng lại muốn tên của class phải là MyProject cơ, thế thì làm như sau:
 
 const Project = class MyProject {
-    // Một tí code nữa cũng ở đây
+    *// Một tí code nữa cũng ở đây*
 }
 
 + Có vẻ khác, khi định nghĩa class theo kiểu expressions như thế này, chúng ta có thể đặt tên cho class (ví dụ dưới) hoặc có thể không (ví dụ trên) đều được. Và chúng ta có thể xem tên class là tên gì bằng cách :
@@ -132,12 +131,12 @@ kết hợp mảng (hoặc object), truyền tham số mảng vào function
 2 loại operator này giống nhau về mặt cú pháp, đó là cùng sử dụng dấu ....
 # *Ví dụ cơ bản nhất, đó là hàm tìm số lớn nhất trong mảng như sau :
 
-Math.max(1,3,5) // output: 5
-Math.max([1,3,5]) // output: NaN
+Math.max(1,3,5)          *// output: 5*
+Math.max([1,3,5])            *// output: NaN*
 
 + Chương trình sẽ không hiểu mà chúng ta cần đến *...,* chỉ cần thêm dấu *...* vào phần argument, chúng ta sẽ có kết quả mong muốn
 
-Math.max(...[1,3,5]) *// output: 5*
+Math.max(...[1,3,5])              *// output: 5*
 
 + Trong trường hợp này, spread operator đã mở rộng (spread) mảng 3 phần tử thành 3 tham số riêng biệt.
 ### Sao chép mảng
@@ -145,17 +144,17 @@ Math.max(...[1,3,5]) *// output: 5*
 + Ví dụ :
 
 const fruits = ['🍏','🍊','🍌','🍉','🍍']
-*//sao chép mảng fruits sang mảng moreFruits*
+     *//sao chép mảng fruits sang mảng moreFruits*
 const moreFruits = [...fruits]; 
-console.log(moreFruits) *// Array(5) [ "🍏", "🍊", "🍌", "🍉", "🍍" ]*
+console.log(moreFruits)                                   *// Array(5) [ "🍏", "🍊", "🍌", "🍉", "🍍" ]*
 
 ### Thêm phần tử vào mảng
 + Như đã đề cập ở trên đây, spread operator còn có thể thêm một hay nhiều phần tử vào mảng, giúp cho đoạn code của chúng ta đơn giản và 
 tự nhiên hơn rất nhiều so với cách viết code truyền thống như trước đây :
 
 const fewFruit = ['🍏','🍊','🍌']
-const fewMoreFruit = ['🍉', '🍍', ...fewFruit] *//thêm các phần tử của mảng fewFruit vào mảng fewMoreFruit*
-console.log(fewMoreFruit) //  Array(5) [ "🍉", "🍍", "🍏", "🍊", "🍌" ]
+const fewMoreFruit = ['🍉', '🍍', ...fewFruit]            *//thêm các phần tử của mảng fewFruit vào mảng fewMoreFruit*
+console.log(fewMoreFruit)                                  *//  Array(5) [ "🍉", "🍍", "🍏", "🍊", "🍌" ]*
 
 ### Kết hợp 2 hay nhiều object với nhau
 + Spread operator ngoài có thể thao tác với mảng thì còn có thể thao tác với các object. Chúng ta có thể sử dụng spread operator để kết hợp các thuộc tính, 
@@ -166,11 +165,11 @@ const objectTwo = {world: "🐻"}
 
  *// Kết hợp objectOne, objectTwo lại trong objectThree và thêm thuộc tính laugh*
 const objectThree = {...objectOne, ...objectTwo, laugh: "😂"}
-console.log(objectThree) *// Object { hello: "🤪", world: "🐻", laugh: "😂" }
+console.log(objectThree)                                    *// Object { hello: "🤪", world: "🐻", laugh: "😂" }
 
-*// Tương tự chúng ta có objectFour, với laugh là một hàm*
+                                                            *// Tương tự chúng ta có objectFour, với laugh là một hàm*
 const objectFour = {...objectOne, ...objectTwo, laugh: () => {console.log("😂".repeat(5))}}
-objectFour.laugh() *// 😂😂😂😂😂
+objectFour.laugh()                                          *// 😂😂😂😂😂*
 
 
 ## 5_Destructuring Assignment 
@@ -183,24 +182,24 @@ let message = 'Hello';
 let [a, b] = message;
 let [x, y, ...z] = message;
 
-console.log(a, b);    *// H e*
-console.log(x, y, z); *// H e ['l', 'l', 'o']*
+console.log(a, b);                              *// H e*
+console.log(x, y, z);                           *// H e ['l', 'l', 'o']*
 
 ### Arrays
 let numbers = [101, 102, 103];
 let [x, y, z] = numbers;
 
-console.log(x, y, z); *// 101 102 103*
+console.log(x, y, z);                           *// 101 102 103*
 Sets
 let set = new Set().add('foo').add('bar');
 let [a, b] = set;
 
-console.log(a, b); *// foo bar*
+console.log(a, b);                              *// foo bar*
 Maps
 let map = new Map().set('a', 1).set('b', 2);
 let [x, y] = map;
 
-console.log(x, y); *// ["a", 1] ["b", 2]*
+console.log(x, y);                              *// ["a", 1] ["b", 2]*
 
 ## 6_Import và Export trong JS
 + Import: Cho phép import các functionality từ các module khác. 
@@ -209,7 +208,7 @@ console.log(x, y); *// ["a", 1] ["b", 2]*
 + named export được sử dụng để xuất nhiều thứ từ một module bằng cách thêm keyword export vào khai báo của chúng. Những thứ được export sẽ được phân biệt bằng tên. 
 Sau đó import những thứ chúng ta cần sử dụng bằng cách bao quanh chúng cặp dấu ngoặc nhọn { }. Tên của module đã nhập phải giống với tên của module đã xuất.
 
-*//-------util.js------*
+        *//-------util.js------*
 export function addTwoNumbers(x,y){
   return x + y
 }
@@ -223,7 +222,7 @@ Default Export:
 
 + Trong Javascript ES6 chỉ cho phép xuất một mặc định cho mỗi file. Default Export có thể cho một function, class hoặc một object.
 
-*//----myFunction.js ----*
+         *//----myFunction.js ----*
 export default function () {
   alert("Hello Default Export")
 }
@@ -239,20 +238,20 @@ export const name2 = 'value2';
 export default 'value2';
 
 import anyName, { name1, name2 } from '/modules/my-module.js';
-console.log(anyName); *// 'value2'*
-console.log(name); *// 'value1'*
+console.log(anyName);                      *// 'value2'*
+console.log(name);                         *// 'value1'*
 ### Đổi tên Export
 + Nếu không thích tên được export, bạn có thể đổi tên nó bằng cách sử dụng từ khóa as
 const name = 'value';
 export { name as newName };
 
 import { newName } from '/modules/my-module.js';
-console.log(newName); *// 'value'*
+console.log(newName);                      *// 'value'*
 *// Tên gốc (name) không còn truy cập được*
-console.log(name); *// undefined*
+console.log(name);                         *// undefined*
 ### 2. Import
 + Để import một module vào một script thì bạn có thể sử dụng import. Ví dụ chúng ta có những module dùng named export thì bạn có thể import như thế này.
-*//----main.js---*
+         *//----main.js---*
 import { addTwoNumbers, students } from 'util';
 Importing with alias:
 import * as util from 'util';
@@ -273,16 +272,16 @@ import {sayHi as hi, sayBye as bye} from './say.js';
 +Được sử dụng để được sử dụng để lặp lại trên tất cả các enumerable properties của một Object, bao gồm enumerable properties được kế thừa. Câu lệnh lặp này có thể được sử dụng với String, Array, or những object đơn giản, nhưng không phải với các object như Map() hoặc Set().
 
 for (let prop in ['a', 'b', 'c']) 
-  console.log(prop);           * // 0, 1, 2 (array indexes)*
+  console.log(prop);                               *// 0, 1, 2 (array indexes)*
 
 for (let prop in 'str') 
-  console.log(prop);            *// 0, 1, 2 (string indexes)*
+  console.log(prop);                               *// 0, 1, 2 (string indexes)*
 
 for (let prop in {a: 1, b: 2, c: 3}) 
-  console.log(prop);            *// a, b, c (object property names)*
+  console.log(prop);                               *// a, b, c (object property names)*
 
 for (let prop in new Set(['a', 'b', 'a', 'd'])) 
-  console.log(prop);            *// undefined (no enumerable properties)*
+  console.log(prop);                               *// undefined (no enumerable properties)*
 
 
 
@@ -292,16 +291,16 @@ for (let prop in new Set(['a', 'b', 'a', 'd']))
 ## Example For ... of
 
 for (let val of ['a', 'b', 'c']) 
-  console.log(val);           * // a, b, c (array values)*
+  console.log(val);                                 *// a, b, c (array values)*
 
 for (let val of 'str') 
-  console.log(val);            *// s, t, r (string characters)*
+  console.log(val);                                 *// s, t, r (string characters)*
 
 for (let val of {a: 1, b: 2, c: 3}) 
-  console.log(prop);          * // TypeError (not iterable)*
+  console.log(prop);                                *// TypeError (not iterable)*
 
 for (let val of new Set(['a', 'b', 'a', 'd'])) 
-  console.log(val);          *  // a, b, d (Set values)*
+  console.log(val);                                 *// a, b, d (Set values)*
 
 
 
