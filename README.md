@@ -272,16 +272,16 @@ import {sayHi as hi, sayBye as bye} from './say.js';
 +Được sử dụng để được sử dụng để lặp lại trên tất cả các enumerable properties của một Object, bao gồm enumerable properties được kế thừa. Câu lệnh lặp này có thể được sử dụng với String, Array, or những object đơn giản, nhưng không phải với các object như Map() hoặc Set().
 
 for (let prop in ['a', 'b', 'c']) 
-  console.log(prop);                               *// 0, 1, 2 (array indexes)*
+  console.log(prop);                    .           *// 0, 1, 2 (array indexes)*
 
 for (let prop in 'str') 
-  console.log(prop);                               *// 0, 1, 2 (string indexes)*
+  console.log(prop);                    .           *// 0, 1, 2 (string indexes)*
 
 for (let prop in {a: 1, b: 2, c: 3}) 
-  console.log(prop);                               *// a, b, c (object property names)*
+  console.log(prop);                        .       *// a, b, c (object property names)*
 
 for (let prop in new Set(['a', 'b', 'a', 'd'])) 
-  console.log(prop);                               *// undefined (no enumerable properties)*
+  console.log(prop);                   .            *// undefined (no enumerable properties)*
 
 
 
@@ -291,16 +291,16 @@ for (let prop in new Set(['a', 'b', 'a', 'd']))
 ## Example For ... of
 
 for (let val of ['a', 'b', 'c']) 
-  console.log(val);                                 *// a, b, c (array values)*
+  console.log(val);                         .        *// a, b, c (array values)*
 
 for (let val of 'str') 
-  console.log(val);                                 *// s, t, r (string characters)*
+  console.log(val);                        .         *// s, t, r (string characters)*
 
 for (let val of {a: 1, b: 2, c: 3}) 
-  console.log(prop);                                *// TypeError (not iterable)*
+  console.log(prop);                       .         *// TypeError (not iterable)*
 
 for (let val of new Set(['a', 'b', 'a', 'd'])) 
-  console.log(val);                                 *// a, b, d (Set values)*
+  console.log(val);                        .         *// a, b, d (Set values)*
 
 
 
