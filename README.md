@@ -27,14 +27,14 @@ Weak, Set: các kiểu dữ liệu phức tạp mới
 hello = () => {
 console.log('hello')
 }
-*// hello()*
+*// hello()
 
 ### Còn Function thông thường thì :
 
 function hello(){
 console.log('hello')
 }
-*// hello()*
+*// hello()
 
 ### Với TH có tham số :
 
