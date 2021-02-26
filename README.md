@@ -47,8 +47,10 @@ console.log('hello ', name)
 ```
 ### Ta có thể giản lược được dấu () với trường hợp có 1 tham số truyền vào.
 + Ngoài ra, với arrow function ta có thể bỏ qua từ khoá return
-double = x => x * 2
-
+double 
+```
+= x => x * 2
+```
 + Còn với function thì :
 ```
 function double(x){
@@ -74,10 +76,11 @@ return item => item * 2
 // console.log(newArray)
 ```
 
-+ ES6 Bạn có thể tạo hàm bằng cách sử dụng dấu mũi tên =>.(Arrow là một dạng viết tắt của các function sử dụng dấu =>,
++ ES6 Bạn có thể tạo hàm bằng cách sử dụng dấu mũi tên =>.(Arrow là một dạng viết tắt của các function sử dụng dấu =>)
 
 ## 3_Class
-+ Ví dụ giả sử bây giờ chúng ta đang làm một ứng dụng quản lý dự án, đương nhiên class đầu tiên chúng ta cần đó là Project ?. Vậy làm sao khai báo class Project đó ra mà xài đây?
++ Ví dụ giả sử bây giờ chúng ta đang làm một ứng dụng quản lý dự án, đương nhiên class đầu tiên chúng ta cần đó là Project ?. 
++ Vậy làm sao khai báo class Project đó ra mà xài đây?
 + Vậy nên ta có thể định nghĩa class Project của ta theo cách này để xài như sau:
 ```
 class Project {
@@ -102,9 +105,12 @@ const Project = class {
 }
 ```
 + Có vẻ khác, khi định nghĩa class theo kiểu expressions như thế này, chúng ta có thể đặt tên cho class (ví dụ dưới) hoặc có thể không (ví dụ trên) đều được. Và chúng ta có thể xem tên class là tên gì bằng cách :
-### console.log(ClassName.name)
+``` console.log(ClassName.name)
+```
 + Khi tạo instance thì chúng ta sẽ new biến mà chúng ta gán class vào (kể cả chúng ta có đặt tên cho class thì vẫn sử dụng biến chúng ta gán vào )
-    const project = new Project()
+```
+const project = new Project()
+```
 ### LƯU Ý:
 + Đối với class thì sẽ không có khái niệm hoisting (Hoisting là hành vi mặc định của JavaScript về việc di chuyển các khai báo lên đầu để compiled hay thực thi code của bạn.) như function, cho nên chúng ta bắt buộc phải định nghĩa class của chúng ta trước rồi sau đó mới có thể sử dụng.
 
